@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+/* font-family: 'Fraunces', serif;
+font-family: 'Montserrat', sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: hsl(30, 38%, 92%);
+    font-size: 14px;
+}
+
+.container {
+    margin: 2em auto;
+    padding: 0 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.grid {
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.image-top img {
+    max-width: 100%;
+    display: inherit;
+}
+
+.content {
+    padding: 2.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.category {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: hsl(228, 12%, 48%);
+}
+
+.product-name {
+    font-family: 'Fraunces' , sans-serif;
+    font-size: 2.5rem;
+    color: hsl(212, 21%, 14%);
+    line-height: 1em;
+}
+
+.description {
+    color: hsl(228, 12%, 48%);
+    line-height: 1.5em;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.sale-price {
+    font-family: 'Fraunces' , sans-serif;
+    color: hsl(158, 36%, 37%);
+    font-size: 2rem;
+}
+
+.original-price {
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+}
+
+button.cart {
+    background:hsl(158, 36%, 37%);
+    border: none;
+    padding: 1em 0;
+    border-radius: 15px;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .5s ease;
+    width: 100%;
+}
+
+button.cart:hover {
+    background-color: #1A4032;
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    transform: translateY(-0.25em);
+}
+
+button.cart img {
+    padding-right: 10px;
+}
+
+footer {
+    text-align: center;
+}
+
+@media only screen and (max-width: 628px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .image-top img {
+        max-height: 450px;
+        width: 100%;
+        object-fit: cover ;
+    }
+
+    .content {
+        display: block;
+    }
+
+    .category, .product-name, .description, .price {
+        margin-bottom: 25px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .container {
+        margin: 15px auto;
+        padding: 0 15px;
+    }
+
+    .image-top img {
+        max-height: 250px;
+    }
+
+    .content {
+        padding: 1.5em;
+    }
+
+}
